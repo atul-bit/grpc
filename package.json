@@ -1,0 +1,29 @@
+{
+  "name": "grpctest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage "
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "grpc": "^1.24.2",
+    "grpc-promise": "^1.4.0",
+    "hbs": "^4.1.0",
+    "mongodb": "^4.7.0",
+    "multi-proto-grpc-server": "^3.0.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.2",
+    "uuid": "^7.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}

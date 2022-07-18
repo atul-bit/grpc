@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+// service definition
+
+
+service ProductService {
+  rpc listProducts(Empty) returns (ProductList) {}
+  rpc readProduct(ProductId) returns (Product) {}
+  rpc createProduct(newProduct) returns (result) {}
+  rpc updateProduct(updateProduct) returns (result) {}
+  rpc deleteProduct(ProductId) returns (result) {}
+}
+
+// message type definitions
+
+message Empty {}
+
+message ProductList {
+  int32 code = 1;
+  string status = 2;
+  string msg = 3;
+  repeated obj products = 4;
+}
+
+message ProductId {
+  int32 id = 1;
+}
+
+message obj {
+  int32 id = 1;
+  string name = 2;
+  string price = 3;
+}
+
+message Product{
+  int32 code = 1;
+  string status = 2;
+  string msg = 3;
+  obj data = 4;
+}
+
+message newProduct {
+  string name = 1;
+  string price = 2;
+}
+message updateProduct {
+    int32 id = 1;
+    string name = 2;
+    string price = 3;
+}
+
+message result {
+  int32 code = 1;
+  string status = 2;
+  string msg = 3;
+}
